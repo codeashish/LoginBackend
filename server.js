@@ -38,9 +38,9 @@ const server = app.listen(port, () =>
 );
 
 
-const userRoute=require('./routes/user')
+const authRoute=require('./routes/auth')
 
-app.use('/users', userRoute);
+app.use('/auth',authRoute);
 
 const errorHandler = require("./middleware/error");
 app.use(errorHandler);

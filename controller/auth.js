@@ -1,9 +1,9 @@
 const bcrypt = require('bcryptjs');
 
-const User = require('./../models/User');
-const { sendWelcomeEmail } = require('./../emails/account');
-const asyncHandler = require('./../middleware/async');
-const errorResponse = require('./../utils/errorResponse');
+const User = require('../models/User');
+const { sendWelcomeEmail } = require('../emails/account');
+const asyncHandler = require('../middleware/async');
+const errorResponse = require('../utils/errorResponse');
 exports.registerUser = asyncHandler(async (req, res, next) => {
 	const { username, email, password } = req.body;
 
